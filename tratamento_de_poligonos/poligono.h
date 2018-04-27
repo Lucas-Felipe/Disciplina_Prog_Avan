@@ -5,7 +5,7 @@
 /**
  * @brief The Poligono class É uma classe que representa um polígono
  */
-class Poligono: public Ponto
+class Poligono
 {
 private:
     /**
