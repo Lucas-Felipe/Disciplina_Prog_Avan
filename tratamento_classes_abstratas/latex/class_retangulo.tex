@@ -1,0 +1,161 @@
+\hypertarget{class_retangulo}{}\section{Retangulo Class Reference}
+\label{class_retangulo}\index{Retangulo@{Retangulo}}
+
+
+The \mbox{\hyperlink{class_retangulo}{Retangulo}} class Classe para representar um retângulo.  
+
+
+
+
+{\ttfamily \#include $<$retangulo.\+h$>$}
+
+Inheritance diagram for Retangulo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_retangulo}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_retangulo_a2ffbe31f15ad438225568f3e6d246e62}{Retangulo}} (\mbox{\hyperlink{class_ponto}{Ponto}} \+\_\+p1, int largura, int altura, bool \+\_\+fillmolde)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_retangulo}{Retangulo}} Construtuor da classe com valores inicias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_retangulo_a6dec6e7cba5c6de8834b00599ee1e150}{setfillmolde}} (bool \+\_\+fillmolde)
+\begin{DoxyCompactList}\small\item\em setfillmolde Método para mudar o valor do molde \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_retangulo_afaaf315f9be859d0d83bae99baf645cb}{setlargura}} (int \+\_\+largura)
+\begin{DoxyCompactList}\small\item\em setlargura Método para mudar o valor da largura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_retangulo_aa4c2a5395874545b17c28743a4362a6f}{setaltura}} (int \+\_\+altura)
+\begin{DoxyCompactList}\small\item\em setaltura Método para mudar o valor da altura \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_retangulo_a44414c2c20da988fec6ec12722ae95dc}{getlargura}} ()
+\begin{DoxyCompactList}\small\item\em getlargura Método que retorna o valor guardado na variável largura \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_retangulo_a42d313847d429dda0869873a7b0e47a1}{getaltura}} ()
+\begin{DoxyCompactList}\small\item\em getaltura Método que retorna o valor guardado na variável altura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_retangulo_ac088dd6d3f4f3d3f80363a868c2e74f1}{draw}} (\mbox{\hyperlink{class_screen}{Screen}} \&t)
+\begin{DoxyCompactList}\small\item\em draw Função virtual que irá ser chamada quando desenhar o retangulo \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_retangulo}{Retangulo}} class Classe para representar um retângulo. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_retangulo_a2ffbe31f15ad438225568f3e6d246e62}\label{class_retangulo_a2ffbe31f15ad438225568f3e6d246e62}} 
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\subsubsection{\texorpdfstring{Retangulo()}{Retangulo()}}
+{\footnotesize\ttfamily Retangulo\+::\+Retangulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ponto}{Ponto}}}]{\+\_\+p1,  }\item[{int}]{largura,  }\item[{int}]{altura,  }\item[{bool}]{\+\_\+fillmolde }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_retangulo}{Retangulo}} Construtuor da classe com valores inicias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+p1} & \mbox{\hyperlink{class_ponto}{Ponto}} do canto superior esquerdo do retângulo \\
+\hline
+{\em largura} & Valor inicial da largura \\
+\hline
+{\em altura} & Valor inicial da altura \\
+\hline
+{\em \+\_\+fillmolde} & Valor inicial do molde \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_retangulo_ac088dd6d3f4f3d3f80363a868c2e74f1}\label{class_retangulo_ac088dd6d3f4f3d3f80363a868c2e74f1}} 
+\index{Retangulo@{Retangulo}!draw@{draw}}
+\index{draw@{draw}!Retangulo@{Retangulo}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Retangulo\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_screen}{Screen}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw Função virtual que irá ser chamada quando desenhar o retangulo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Matriz onde será desenhado o retangulo \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_figurageometrica_a68d9aba508879bb7a9ea1fe9d1d4f5f4}{Figurageometrica}}.
+
+\mbox{\Hypertarget{class_retangulo_a42d313847d429dda0869873a7b0e47a1}\label{class_retangulo_a42d313847d429dda0869873a7b0e47a1}} 
+\index{Retangulo@{Retangulo}!getaltura@{getaltura}}
+\index{getaltura@{getaltura}!Retangulo@{Retangulo}}
+\subsubsection{\texorpdfstring{getaltura()}{getaltura()}}
+{\footnotesize\ttfamily int Retangulo\+::getaltura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getaltura Método que retorna o valor guardado na variável altura 
+
+\begin{DoxyReturn}{Returns}
+Retorna um inteiro com o valor da altura do retangulo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_retangulo_a44414c2c20da988fec6ec12722ae95dc}\label{class_retangulo_a44414c2c20da988fec6ec12722ae95dc}} 
+\index{Retangulo@{Retangulo}!getlargura@{getlargura}}
+\index{getlargura@{getlargura}!Retangulo@{Retangulo}}
+\subsubsection{\texorpdfstring{getlargura()}{getlargura()}}
+{\footnotesize\ttfamily int Retangulo\+::getlargura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getlargura Método que retorna o valor guardado na variável largura 
+
+\begin{DoxyReturn}{Returns}
+Retorna um inteiro com o valor da altura do retangulo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_retangulo_aa4c2a5395874545b17c28743a4362a6f}\label{class_retangulo_aa4c2a5395874545b17c28743a4362a6f}} 
+\index{Retangulo@{Retangulo}!setaltura@{setaltura}}
+\index{setaltura@{setaltura}!Retangulo@{Retangulo}}
+\subsubsection{\texorpdfstring{setaltura()}{setaltura()}}
+{\footnotesize\ttfamily void Retangulo\+::setaltura (\begin{DoxyParamCaption}\item[{int}]{\+\_\+altura }\end{DoxyParamCaption})}
+
+
+
+setaltura Método para mudar o valor da altura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+altura} & Valor que irá ser guardado na variável altura \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_retangulo_a6dec6e7cba5c6de8834b00599ee1e150}\label{class_retangulo_a6dec6e7cba5c6de8834b00599ee1e150}} 
+\index{Retangulo@{Retangulo}!setfillmolde@{setfillmolde}}
+\index{setfillmolde@{setfillmolde}!Retangulo@{Retangulo}}
+\subsubsection{\texorpdfstring{setfillmolde()}{setfillmolde()}}
+{\footnotesize\ttfamily void Retangulo\+::setfillmolde (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+fillmolde }\end{DoxyParamCaption})}
+
+
+
+setfillmolde Método para mudar o valor do molde 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+fillmolde} & Parâmetro que irá trocar o valor do molde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_retangulo_afaaf315f9be859d0d83bae99baf645cb}\label{class_retangulo_afaaf315f9be859d0d83bae99baf645cb}} 
+\index{Retangulo@{Retangulo}!setlargura@{setlargura}}
+\index{setlargura@{setlargura}!Retangulo@{Retangulo}}
+\subsubsection{\texorpdfstring{setlargura()}{setlargura()}}
+{\footnotesize\ttfamily void Retangulo\+::setlargura (\begin{DoxyParamCaption}\item[{int}]{\+\_\+largura }\end{DoxyParamCaption})}
+
+
+
+setlargura Método para mudar o valor da largura 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+largura} & Valor que irá ser guardado na variável largura \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+retangulo.\+h\item 
+retangulo.\+cpp\end{DoxyCompactItemize}
