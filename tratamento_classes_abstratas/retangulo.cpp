@@ -46,6 +46,30 @@ int Retangulo::getaltura()
 
 void Retangulo::draw(Screen &t)
 {
-
-    cout<<t;
+    if(fillmolde)
+    {
+        for(int i=p[0].getx();i<p[0].getx()+altura;i++)
+        {
+            for(int j=p[0].gety();j<p[0].gety()+largura;j++)
+            {
+                t.setPixel(i,j);
+            }
+        }
+    }
+    else
+    {
+        for(int i=p[0].getx();i<p[0].getx()+altura;i++)
+        {
+            for(int j=p[0].gety();j<p[0].gety()+largura;j++)
+            {
+                if(i==p[0].getx() || i==p[0].getx()+altura-1){
+                    t.setPixel(i,j);
+                }
+                if(j==p[0].gety() || j==p[0].gety()+largura-1)
+                {
+                    t.setPixel(i,j);
+                }
+            }
+        }
+    }
 }

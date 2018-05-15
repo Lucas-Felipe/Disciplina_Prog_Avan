@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['reta',['Reta',['../class_reta.html#a79c6845d930a7762d80224e5857fe3da',1,'Reta']]],
-  ['retangulo',['Retangulo',['../class_retangulo.html#a2ffbe31f15ad438225568f3e6d246e62',1,'Retangulo']]]
+  ['operator_3c_3c',['operator&lt;&lt;',['../screen_8cpp.html#aab6a2880746bfe1b7964817cc8f0989e',1,'screen.cpp']]]
 ];

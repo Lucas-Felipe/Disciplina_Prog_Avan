@@ -104,7 +104,6 @@ public:
    * Método que salva a tela atual em um arquivo
    */
   void salvafigura();
-
   /**
    * @brief operator <<
    * Operador << para imprimir a tela em forma de matriz
@@ -116,51 +115,6 @@ public:
    * Retorna um objeto do tipo ostream que é um fluxo de saída
    */
   friend ostream& operator<<(ostream &os, Screen &t);
-  /**
-   * @brief desenhareta
-   * Método que altera as coordenadas da tela com o "pincel" usando o algoritmo de Bresenham para desenhar retas
-   * @param x1
-   * Coordenada x do ponto inicial
-   * @param y1
-   * Coordenada y do ponto inicial
-   * @param x2
-   * Coordenada x do ponto final
-   * @param y2
-   * Coordenada y do ponto final
-   * @param t
-   * Tela em que as figuras estão sendo desenhadas
-   */
-  friend void desenhareta(int x1, int y1, int x2, int y2,Screen &t);
-  /**
-   * @brief desenharetangulo
-   * Método que altera as coordenadas da tela com o "pincel"
-   * @param p
-   * Ponto do canto superior esquerdo
-   * @param largura
-   * Largura do retangulo
-   * @param altura
-   * Altura do retangulo
-   * @param t
-   * Tela onde está sendo desenhado as figuras
-   * @param _fillmolde
-   * Variável que indica o molde
-   */
-  friend void desenharetangulo(Ponto p,int largura,int altura,Screen &t,bool _fillmolde);
-  /**
-   * @brief desenhacirculo
-   * Método que altera as coordenadas da tela com o "pincel" usando o algoritmo de Bresenham para desenhar circulos
-   * @param _x
-   * Coordenada x do centro do circulo
-   * @param _y
-   * Coordenada y do centro do circulo
-   * @param radius
-   * Valor do raio da circunferência
-   * @param t
-   * Tela onde estão sendo desenhadas as figuras
-   * @param _fillmolde
-   * Variável que indica o molde
-   */
-  friend void desenhacirculo(int _x,int _y,int radius, Screen &t,bool _fillmolde);
 };
 
 #endif // SCREEN_H

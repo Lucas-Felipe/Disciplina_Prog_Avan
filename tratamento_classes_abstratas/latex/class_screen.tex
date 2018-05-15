@@ -12,7 +12,6 @@ The \mbox{\hyperlink{class_screen}{Screen}} class Classe para representar uma te
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}\label{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}} 
 \mbox{\hyperlink{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}{Screen}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_screen}{Screen}} Construtor padrão da classe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_screen_ac4d187efda643cfc9127230d6363c721}{setnlim}} (int \+\_\+nlin)
@@ -27,29 +26,34 @@ int \mbox{\hyperlink{class_screen_abaae93e39587a865d4ac1f7fa1a501c2}{getncol}} (
 \begin{DoxyCompactList}\small\item\em getncol Método que retorna a quantidade de colunas da tela \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_screen_ae6bea81c57a22d226507c3c26fa95ee0}{set\+Pixel}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em set\+Pixel Método que muda o \char`\"{}pixel\char`\"{} com o valor do \textquotesingle{}brush\textquotesingle{}, representado como uma coordenada de uma matriz \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_screen_a35e74266b2a04e37b354ceff7a5f1031}\label{class_screen_a35e74266b2a04e37b354ceff7a5f1031}} 
 void \mbox{\hyperlink{class_screen_a35e74266b2a04e37b354ceff7a5f1031}{clear}} ()
 \begin{DoxyCompactList}\small\item\em clear Método que limpa a tela, muda todos o valores atuais da tela para o valor inicial \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_screen_aebc4eb6cb5acf15a0f04c1494622ab23}{set\+Brush}} (char \+\_\+brush)
 \begin{DoxyCompactList}\small\item\em set\+Brush Método que muda o caractere com qual queremos desenhar as figuras \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_screen_ad0d7ac072702d42e6a920a806fbc79e2}\label{class_screen_ad0d7ac072702d42e6a920a806fbc79e2}} 
 void \mbox{\hyperlink{class_screen_ad0d7ac072702d42e6a920a806fbc79e2}{salvafigura}} ()
 \begin{DoxyCompactList}\small\item\em salvafigura Método que salva a tela atual em um arquivo \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 ostream \& \mbox{\hyperlink{class_screen_aab6a2880746bfe1b7964817cc8f0989e}{operator$<$$<$}} (ostream \&os, \mbox{\hyperlink{class_screen}{Screen}} \&t)
-\begin{DoxyCompactList}\small\item\em operator $<$$<$ Operador $<$$<$ para imprimir a tela em forma de matriz \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_screen_adbcadcf484d39b99a5653dbb66ebc373}{desenhareta}} (int x1, int y1, int x2, int y2, \mbox{\hyperlink{class_screen}{Screen}} \&t)
-\begin{DoxyCompactList}\small\item\em desenhareta Método que altera as coordenadas da tela com o \char`\"{}pincel\char`\"{} usando o algoritmo de Bresenham para desenhar retas \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_screen_a7528dc26ec23f8212f5a0748a09884f1}{desenharetangulo}} (\mbox{\hyperlink{class_ponto}{Ponto}} p, int largura, int altura, \mbox{\hyperlink{class_screen}{Screen}} \&t, bool \+\_\+fillmolde)
-\begin{DoxyCompactList}\small\item\em desenharetangulo Método que altera as coordenadas da tela com o \char`\"{}pincel\char`\"{} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_screen_adcbc719000bbfb8a9354328c32147ff2}{desenhacirculo}} (int \+\_\+x, int \+\_\+y, int radius, \mbox{\hyperlink{class_screen}{Screen}} \&t, bool \+\_\+fillmolde)
-\begin{DoxyCompactList}\small\item\em desenhacirculo Método que altera as coordenadas da tela com o \char`\"{}pincel\char`\"{} usando o algoritmo de Bresenham para desenhar circulos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em operator $<$$<$ Operador $<$$<$ para imprimir a tela em forma de matriz \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 The \mbox{\hyperlink{class_screen}{Screen}} class Classe para representar uma tela onde será desenhada as figuras geométrica. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}\label{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}} 
+\index{Screen@{Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Screen@{Screen}}
+\subsubsection{\texorpdfstring{Screen()}{Screen()}}
+{\footnotesize\ttfamily Screen\+::\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_screen}{Screen}} Construtor padrão da classe. 
+
+
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_screen_a3570e45d7dbc261cc4da471259a66d7a}\label{class_screen_a3570e45d7dbc261cc4da471259a66d7a}} 
@@ -69,6 +73,16 @@ alocamat Método que aloca o tamanho da tela
 {\em \+\_\+ncol} & Número de colunas que a tela terá \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_screen_a35e74266b2a04e37b354ceff7a5f1031}\label{class_screen_a35e74266b2a04e37b354ceff7a5f1031}} 
+\index{Screen@{Screen}!clear@{clear}}
+\index{clear@{clear}!Screen@{Screen}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Screen\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear Método que limpa a tela, muda todos o valores atuais da tela para o valor inicial 
+
 \mbox{\Hypertarget{class_screen_abaae93e39587a865d4ac1f7fa1a501c2}\label{class_screen_abaae93e39587a865d4ac1f7fa1a501c2}} 
 \index{Screen@{Screen}!getncol@{getncol}}
 \index{getncol@{getncol}!Screen@{Screen}}
@@ -95,6 +109,16 @@ getnlin Método que retorna a quantidade de linhas da tela
 \begin{DoxyReturn}{Returns}
 Retorna um inteiro que é o número de linhas da tela 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_screen_ad0d7ac072702d42e6a920a806fbc79e2}\label{class_screen_ad0d7ac072702d42e6a920a806fbc79e2}} 
+\index{Screen@{Screen}!salvafigura@{salvafigura}}
+\index{salvafigura@{salvafigura}!Screen@{Screen}}
+\subsubsection{\texorpdfstring{salvafigura()}{salvafigura()}}
+{\footnotesize\ttfamily void Screen\+::salvafigura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+salvafigura Método que salva a tela atual em um arquivo 
+
 \mbox{\Hypertarget{class_screen_aebc4eb6cb5acf15a0f04c1494622ab23}\label{class_screen_aebc4eb6cb5acf15a0f04c1494622ab23}} 
 \index{Screen@{Screen}!set\+Brush@{set\+Brush}}
 \index{set\+Brush@{set\+Brush}!Screen@{Screen}}
@@ -160,75 +184,6 @@ set\+Pixel Método que muda o \char`\"{}pixel\char`\"{} com o valor do \textquot
 
 
 \subsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{class_screen_adcbc719000bbfb8a9354328c32147ff2}\label{class_screen_adcbc719000bbfb8a9354328c32147ff2}} 
-\index{Screen@{Screen}!desenhacirculo@{desenhacirculo}}
-\index{desenhacirculo@{desenhacirculo}!Screen@{Screen}}
-\subsubsection{\texorpdfstring{desenhacirculo}{desenhacirculo}}
-{\footnotesize\ttfamily void desenhacirculo (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x,  }\item[{int}]{\+\_\+y,  }\item[{int}]{radius,  }\item[{\mbox{\hyperlink{class_screen}{Screen}} \&}]{t,  }\item[{bool}]{\+\_\+fillmolde }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-desenhacirculo Método que altera as coordenadas da tela com o \char`\"{}pincel\char`\"{} usando o algoritmo de Bresenham para desenhar circulos 
-
-
-\begin{DoxyParams}{Parameters}
-{\em \+\_\+x} & Coordenada x do centro do circulo \\
-\hline
-{\em \+\_\+y} & Coordenada y do centro do circulo \\
-\hline
-{\em radius} & Valor do raio da circunferência \\
-\hline
-{\em t} & Tela onde estão sendo desenhadas as figuras \\
-\hline
-{\em \+\_\+fillmolde} & Variável que indica o molde \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_screen_adbcadcf484d39b99a5653dbb66ebc373}\label{class_screen_adbcadcf484d39b99a5653dbb66ebc373}} 
-\index{Screen@{Screen}!desenhareta@{desenhareta}}
-\index{desenhareta@{desenhareta}!Screen@{Screen}}
-\subsubsection{\texorpdfstring{desenhareta}{desenhareta}}
-{\footnotesize\ttfamily void desenhareta (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{\mbox{\hyperlink{class_screen}{Screen}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-desenhareta Método que altera as coordenadas da tela com o \char`\"{}pincel\char`\"{} usando o algoritmo de Bresenham para desenhar retas 
-
-
-\begin{DoxyParams}{Parameters}
-{\em x1} & Coordenada x do ponto inicial \\
-\hline
-{\em y1} & Coordenada y do ponto inicial \\
-\hline
-{\em x2} & Coordenada x do ponto final \\
-\hline
-{\em y2} & Coordenada y do ponto final \\
-\hline
-{\em t} & Tela em que as figuras estão sendo desenhadas \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_screen_a7528dc26ec23f8212f5a0748a09884f1}\label{class_screen_a7528dc26ec23f8212f5a0748a09884f1}} 
-\index{Screen@{Screen}!desenharetangulo@{desenharetangulo}}
-\index{desenharetangulo@{desenharetangulo}!Screen@{Screen}}
-\subsubsection{\texorpdfstring{desenharetangulo}{desenharetangulo}}
-{\footnotesize\ttfamily void desenharetangulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ponto}{Ponto}}}]{p,  }\item[{int}]{largura,  }\item[{int}]{altura,  }\item[{\mbox{\hyperlink{class_screen}{Screen}} \&}]{t,  }\item[{bool}]{\+\_\+fillmolde }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-desenharetangulo Método que altera as coordenadas da tela com o \char`\"{}pincel\char`\"{} 
-
-
-\begin{DoxyParams}{Parameters}
-{\em p} & \mbox{\hyperlink{class_ponto}{Ponto}} do canto superior esquerdo \\
-\hline
-{\em largura} & Largura do retangulo \\
-\hline
-{\em altura} & Altura do retangulo \\
-\hline
-{\em t} & Tela onde está sendo desenhado as figuras \\
-\hline
-{\em \+\_\+fillmolde} & Variável que indica o molde \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_screen_aab6a2880746bfe1b7964817cc8f0989e}\label{class_screen_aab6a2880746bfe1b7964817cc8f0989e}} 
 \index{Screen@{Screen}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Screen@{Screen}}
@@ -253,5 +208,5 @@ Retorna um objeto do tipo ostream que é um fluxo de saída
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-screen.\+h\item 
-screen.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{screen_8h}{screen.\+h}}\item 
+\mbox{\hyperlink{screen_8cpp}{screen.\+cpp}}\end{DoxyCompactItemize}

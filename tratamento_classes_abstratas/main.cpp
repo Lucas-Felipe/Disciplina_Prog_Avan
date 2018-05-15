@@ -69,7 +69,6 @@ int main()
                 fin>>x0>>y0>>x1>>y1;
                 Ponto p1(x0,y0),p2(x1,y1);
                 figuras.push_back(new Reta(p1,p2));
-                desenhareta(p1.getx(),p1.gety(),p2.getx(),p2.gety(),matriz);
                 fin>>comando;
             }else
             {
@@ -84,7 +83,6 @@ int main()
                 Ponto p1(x0,y0);
 
                 figuras.push_back(new Retangulo(p1,largura,altura,fillmolde));
-                desenharetangulo(p1,largura,altura,matriz,fillmolde);
 
                 fin>>comando;
             }else
@@ -100,16 +98,15 @@ int main()
                 Ponto p1(x0,y0);
                 figuras.push_back(new Circulo(p1,raio,fillmolde));
 
-                desenhacirculo(x0,y0,raio,matriz,fillmolde);
-
             }else
             {
                 cout<<"Erro no comando circle! circulo nao criado!"<<endl;
             }
 
-
-            figuras[0]->draw(matriz);
-
+            for(int i=0;i<figuras.size();i++){
+                figuras[i]->draw(matriz);
+            }
+            cout<<matriz;
             fin.close();
             break;
         }
@@ -138,7 +135,12 @@ int main()
                         cin>>x0>>y0>>x1>>y1;
                         Ponto p1(x0,y0),p2(x1,y1);
                         figuras.push_back(new Reta(p1,p2));
-                        desenhareta(p1.getx(),p1.gety(),p2.getx(),p2.gety(),matriz);
+
+                        for(int i=0;i<figuras.size();i++)
+                        {
+                            figuras[i]->draw(matriz);
+                        }
+                        cout<<matriz;
                         break;
                     }
                     case(2):
@@ -149,7 +151,11 @@ int main()
                         cin>>x0>>y0>>largura>>altura>>fillmolde;
                         Ponto p1(x0,y0);
                         figuras.push_back(new Retangulo(p1,largura,altura,fillmolde));
-                        desenharetangulo(p1,largura,altura,matriz,fillmolde);
+                        for(int i=0;i<figuras.size();i++)
+                        {
+                            figuras[i]->draw(matriz);
+                        }
+                        cout<<matriz;
                         break;
                     }
                     case(3):
@@ -160,13 +166,15 @@ int main()
                         cin>>x0>>y0>>raio>>fillmolde;
                         Ponto p1(x0,y0);
                         figuras.push_back(new Circulo(p1,raio,fillmolde));
-                        desenhacirculo(x0,y0,raio,matriz,fillmolde);
+                        for(int i=0;i<figuras.size();i++)
+                        {
+                            figuras[i]->draw(matriz);
+                        }
+                        cout<<matriz;
                         break;
                     }
                 }
-            }while(fig!=0);
-
-            figuras[0]->draw(matriz);
+            }while(fig!=0);           
         }
     }
     cout<<"Deseja salvar a imagem num arquivo? 1-sim 0-nao:";

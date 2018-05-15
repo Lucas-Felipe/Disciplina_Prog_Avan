@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['p',['p',['../class_figurageometrica.html#a7fe8a9843c286befdf0b96871d6e0a4b',1,'Figurageometrica']]],
-  ['ponto',['Ponto',['../class_ponto.html',1,'Ponto'],['../class_ponto.html#aab845b69e717a88f821eac509ae61d0c',1,'Ponto::Ponto()']]]
+  ['operator_3c_3c',['operator&lt;&lt;',['../class_screen.html#aab6a2880746bfe1b7964817cc8f0989e',1,'Screen::operator&lt;&lt;()'],['../screen_8cpp.html#aab6a2880746bfe1b7964817cc8f0989e',1,'operator&lt;&lt;():&#160;screen.cpp']]]
 ];
