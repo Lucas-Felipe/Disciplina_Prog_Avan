@@ -8,10 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
   ui(new Ui::MainWindow)
 {
   ui->setupUi(this);
-  connect(&Server,
-          SIGNAL(message(QString)),
-          this,
-          SLOT(showMessage(QString)));
+  connect(&Server, SIGNAL(message(QString)),this,SLOT(showMessage(QString)));
   Server.startServer();
   QStringList list;
   list = Server.getIPList();

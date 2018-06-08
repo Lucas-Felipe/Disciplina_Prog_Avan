@@ -17,10 +17,7 @@ class DataStorage{
 public:
   DataStorage();
   vector<Entry> getData(QHostAddress address, unsigned int lastn=2);
-  void addData(QHostAddress address,
-               qint64 time,
-               float measurement);
-
+  void addData(QHostAddress address,qint64 time,float measurement);
   void deleteHost(quint32 address);
   vector<QHostAddress> getHostList();
 

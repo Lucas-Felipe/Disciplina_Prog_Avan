@@ -29,16 +29,13 @@ void MyServer::receiveMsg(QString str){
 
 void MyServer::incomingConnection(qintptr socketDescriptor){
   QString str;
-  str = QString("<i>") + QString().setNum(socketDescriptor) +
-      " connecting...</i>";
+  str = QString("<i>") + QString().setNum(socketDescriptor) + " connecting...</i>";
   emit message(str);
   MyThread *thread = new MyThread(socketDescriptor,this, &storage);
-  // assegura que o objeto da thread será deletado quando a thread
-  // for finalizada.
+  // assegura que o objeto da thread será deletado quando a thread for finalizada.
   connect(thread,SIGNAL(finished()), thread, SLOT(deleteLater()));
 
-  // redireciona as mensagens enviadas pela thread para serem reemitidos
-  // pelo servidor
+  // redireciona as mensagens enviadas pela thread para serem reemitidos pelo servidor
   connect(thread,SIGNAL(message(QString)), this, SLOT(receiveMsg(QString)));
   thread->run();
 }

@@ -18,7 +18,6 @@ DataStorage::DataStorage() : mutex(){
 vector<Entry> DataStorage::getData(QHostAddress address, unsigned int lastn){
   // trabalhando aqui...
 
-
   vector<Entry> range;
   vector<Entry>::iterator vi;
   // locks the mutex so
@@ -83,16 +82,3 @@ vector<QHostAddress> DataStorage::getHostList()
   }
   return hostList;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

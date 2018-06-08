@@ -31,41 +31,24 @@ void plotter::paintEvent(QPaintEvent *event)
      */
     QPen pen;
 
-
-
     //define a cor e tipo do preenchimento do fundo da tela
-    //brush.setColor(QColor(255,255,100));
     brush.setColor(QColor(255,255,51));
-
     brush.setStyle(Qt::SolidPattern);
 
     //define a cor da borda da tela
-    //pen.setColor(QColor(255,0,0));
     pen.setColor(QColor(255,0,0));
 
     //define a largura da borda
     pen.setWidth(2);
 
-
     painter.setBrush(brush);
-
     painter.setPen(pen);
-
 
     painter.drawRect(0,0,width(),height());
-    painter.drawRect(0,height()/2,width(),height());
-    /*
-    pen.setColor(QColor(255,180,0));
-    painter.setPen(pen);
-    */
 
     //define a cor das linhas da tela
-
-    //pen.setColor(QColor(0,0,255));
     pen.setColor(QColor(255,255,255));
     painter.setPen(pen);
-
-
 }
 
 /**

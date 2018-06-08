@@ -122,11 +122,11 @@ void MainWindow::getData(){
 
           socket->write(ipStr.toStdString().c_str());
 
-            socket->waitForBytesWritten();
-            socket->waitForReadyRead();
+          socket->waitForBytesWritten();
+          socket->waitForReadyRead();
 
-            qDebug() << socket->bytesAvailable();
-            while(socket->bytesAvailable()){
+          qDebug() << socket->bytesAvailable();
+          while(socket->bytesAvailable()){
                 //separa o tempo recebido do servidor do valor dado
                 str = socket->readLine().replace("\n","").replace("\r","");
 
