@@ -47,8 +47,9 @@ void plotter::paintEvent(QPaintEvent *event)
     painter.drawRect(0,0,width(),height());
 
     //define a cor das linhas da tela
-    pen.setColor(QColor(255,255,255));
+    pen.setColor(QColor(0,0,255));
     painter.setPen(pen);
+
 }
 
 /**
@@ -80,7 +81,7 @@ void plotter::plotGrafico(vector<qint64> &t, vector<int> &v)
 
     pen.setWidth(2);
 
-    pen.setColor(QColor(255,255,255));
+    pen.setColor(QColor(0,0,255));
     painter.setPen(pen);
 
     for(int i;i<t.size();i++)
@@ -110,7 +111,7 @@ void plotter::plotGrafico(vector<qint64> &t, vector<int> &v)
          qDebug() << y2;
          qDebug() << x1;
          qDebug() << y1;
-         painter.drawRect(x1,y1,x2,y2);
+         painter.drawLine(x1,y1,x2,y2);
      }
      painter.drawRect(0,height()/2,width(),height());
 

@@ -11,7 +11,7 @@ class plotter : public QWidget
     Q_OBJECT
 public:
     explicit plotter(QWidget *parent = nullptr);
-    Plotter(QWidget *parent);
+    //Plotter(QWidget *parent);
     void paintEvent(QPaintEvent *event);
     void plotGrafico(vector<qint64> &t, vector<int> &v);
 

@@ -117,7 +117,7 @@ void MainWindow::getData(){
         if(socket->isOpen()){
             qDebug() << "reading...";
 
-         ipStr = "get " + ui->lineEdit_IPdoServ->text() + " 5" + "\r\n";
+          ipStr = "get " + ui->lineEdit_IPdoServ->text() + " 5" + "\r\n";
 
 
           socket->write(ipStr.toStdString().c_str());
@@ -141,7 +141,6 @@ void MainWindow::getData(){
 
                     tempo.push_back(thetime);
                     valor.push_back(str.toInt());
-
                 }
                 if(tempo.size()==30)
                   ui->widget_grafico->plotGrafico(tempo,valor);
