@@ -16,19 +16,12 @@ MainWindow::MainWindow(QWidget *parent) :
     tcpConnect();
 
     connect(ui->pushButton_start,SIGNAL(clicked(bool)),this,SLOT(start()));
-
     connect(ui->pushButton_connect,SIGNAL(clicked(bool)),this,SLOT(tcpConnect()));
-
     connect(ui->pushButton_desconnect,SIGNAL(clicked(bool)),this,SLOT(tcpDisconnect()));
-
     connect(ui->pushButton_stop,SIGNAL(clicked(bool)),this,SLOT(stop()));
-
     connect(ui->pushButton_update,SIGNAL(clicked(bool)),this,SLOT(update()));
 }
 
-/**
- * @brief MainWindow::tcpConnect Conecta-se ao IP dado
- */
 void MainWindow::tcpConnect(){
     socket->connectToHost(ui->lineEdit_IPdoServ->text(),1234);
     if(socket->waitForConnected(3000)){
@@ -39,36 +32,24 @@ void MainWindow::tcpConnect(){
     }
 }
 
-/**
- * @brief MainWindow::tcpDisconnect Desconecta-se do Ip
- */
 void MainWindow::tcpDisconnect()
 {
     socket->disconnectFromHost();
     qDebug() << "Desconectado";
 }
 
-/**
- * @brief MainWindow::start Inicia o recebimento dos dados
- */
 void MainWindow::start()
 {
     timer= startTimer(ui->horizontalSlider_timing->value() * 1000);
     qDebug ()<< "Timer Started";
 }
 
-/**
- * @brief MainWindow::stop Finaliza o recebimento dos dados
- */
 void MainWindow::stop()
 {
     killTimer(timer);
     qDebug() << "Timer Killed";
 }
 
-/**
- * @brief MainWindow::update Atualiza a lista de IPs conectados
- */
 void MainWindow::update()
 {
     //armazena o comando a ser enviado ao servidor
@@ -94,86 +75,96 @@ void MainWindow::update()
                }
         }
     }
-
 }
 
-/**
- * @brief MainWindow::getData Acessa o servidor e recolhe a data
- */
 void MainWindow::getData(){
-    QString str;
-    QByteArray array;
-    QStringList list;
-    qint64 thetime;
-    QString ipStr;
-    vector<qint64> tempo;
-    vector<int> valor;
+    if(timer)
+    {
+        killTimer(timer);
+    }
+    timer=startTimer(ui->horizontalSlider_timing->value()*1000);
+}
 
-    tempo.clear();
-    valor.clear();
+void MainWindow::timerEvent(QTimerEvent *e)
+{
+    QString str;
+    QStringList list;
+    qint64 thetime, num;
+    double max_x, min_x, min_y, max_y;
+    vector<double> time;
+    vector<double> data;
+    vector<double> temposnorm;
+    vector<double> dadosnorm;
 
     qDebug() << "to get data...";
     if(socket->state() == QAbstractSocket::ConnectedState){
         if(socket->isOpen()){
             qDebug() << "reading...";
-
-          ipStr = "get " + ui->lineEdit_IPdoServ->text() + " 5" + "\r\n";
-
-
-          socket->write(ipStr.toStdString().c_str());
-
-          socket->waitForBytesWritten();
-          socket->waitForReadyRead();
-
-          qDebug() << socket->bytesAvailable();
-          while(socket->bytesAvailable()){
-                //separa o tempo recebido do servidor do valor dado
+            str = "get " + ui->listWidget_IPs->currentItem()->text() + " 30\r\n";
+            socket->write(str.toStdString().c_str());
+            socket->waitForBytesWritten();
+            socket->waitForReadyRead();
+            qDebug() << socket->bytesAvailable();
+            time.clear();
+            data.clear();
+            while(socket->bytesAvailable()){
                 str = socket->readLine().replace("\n","").replace("\r","");
-
                 list = str.split(" ");
+
                 if(list.size() == 2){
                     bool ok;
                     str = list.at(0);
-
                     thetime = str.toLongLong(&ok);
-                    str = list.at(1);
-                    qDebug() << thetime << ": " << str;
+                    time.push_back(thetime);
 
-                    tempo.push_back(thetime);
-                    valor.push_back(str.toInt());
+                    str = list.at(1);
+                    num = str.toLongLong(&ok);
+                    data.push_back(num);
+                    qDebug() << thetime << ": " << str;
                 }
-                if(tempo.size()==30)
-                  ui->widget_grafico->plotGrafico(tempo,valor);
             }
         }
     }
+
+    qDebug()<<data.size()<<time.size();
+    //achando valores maximos e minimos
+    max_x = time[0], min_x = time[0];
+    min_y = data[0], max_y = data[0];
+
+    for(int i = 1 ; i < 30; i++){
+       if(time[i] < min_x){
+          min_x = time[i];
+       }else if(time[i] > max_x){
+          max_x = time[i];
+       }
+       if(data[i] < min_y){
+          min_y = data[i];
+       }else if(data[i] > max_y){
+          max_y = data[i];
+       }
+    }
+
+    qDebug()<<max_x-min_x;
+
+    qDebug()<<max_y<<min_y;
+
+    //normalizando dados
+    temposnorm.clear();
+    dadosnorm.clear();
+    for(int i = 0; i<30; i++){
+            temposnorm.push_back((time[i] - min_x)/(max_x - min_x));
+            dadosnorm.push_back((data[i] - min_y)/(max_y - min_y));
+    }
+    qDebug()<<"passou";
+    ui->widget_grafico->plotGrafico(temposnorm,dadosnorm);
 }
 
-/**
- * @brief MainWindow::timerEvent Ação a ser realizada no intervalo de tempo
- * @param e
- */
-void MainWindow::timerEvent(QTimerEvent *e)
-{
-    getData();
-    qDebug()<<"Getting data";
-}
-
-/**
- * @brief MainWindow::getItem
- * Método
- */
 void MainWindow::getItem()
 {
     QListWidgetItem *item = ui->listWidget_IPs->currentItem();
     ui->lineEdit_IPdoServ->setText( item->text());
-
 }
 
-/**
- * @brief MainWindow::~MainWindow
- * Destrutor da classe mainwindow
- */
 MainWindow::~MainWindow()
 {
     delete socket;
