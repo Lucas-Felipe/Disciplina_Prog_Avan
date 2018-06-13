@@ -60,23 +60,40 @@ void MainWindow::putData(){
     }
 }
 
+/**
+ * @brief Disconnect
+ * Método que disconecta o programa do server
+ */
 void MainWindow::Disconnect()
 {
     socket->disconnectFromHost();
 }
 
+/**
+ * @brief start
+ * Método que começa a produção de dados aleatórios
+ */
 void MainWindow::start()
 {
     timer = startTimer(ui->horizontalSlider_timing->value()*1000);
     qDebug ()<< "Timer Started";
 }
 
+/**
+* @brief timerEvent
+* Método que executa constantemente uma função do programa
+* @param e
+*/
 void MainWindow::timerEvent(QTimerEvent *e)
 {
     putData();
     qDebug() << "Sending Data";
 }
 
+/**
+ * @brief stop
+ * Método que interrompe a produção de dados
+ */
 void MainWindow::stop()
 {
     killTimer(timer);

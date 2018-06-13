@@ -1,0 +1,103 @@
+\hypertarget{class_my_thread}{}\section{My\+Thread Class Reference}
+\label{class_my_thread}\index{My\+Thread@{My\+Thread}}
+
+
+The \mbox{\hyperlink{class_my_thread}{My\+Thread}} class cria uma thread que lida com o tratamento de uma conexao T\+CP de entrada.  
+
+
+
+
+{\ttfamily \#include $<$mythread.\+h$>$}
+
+Inheritance diagram for My\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_thread}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_my_thread_a277618fdd448b927f2e250c2076fc176}{ready\+Read}} ()
+\item 
+void \mbox{\hyperlink{class_my_thread_a447710039787ae20134a9b572487840f}{disconnected}} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_my_thread_aebf11d93838f22c9547d0c6aa97002be}{error}} (Q\+Tcp\+Socket\+::\+Socket\+Error socketerror)
+\item 
+void \mbox{\hyperlink{class_my_thread_ae49528d4ec1b2208240f707f5aa74adf}{message}} (Q\+String)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_thread_ac1b04b0fa6b32038e810c7105ef762f6}{My\+Thread}} (int ID, Q\+Object $\ast$parent, \mbox{\hyperlink{class_data_storage}{Data\+Storage}} $\ast$storage)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_my_thread}{My\+Thread}} eh o construtor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_thread_a48f2e366e852087c53705f64e1ee65c2}{run}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_my_thread}{My\+Thread}} class cria uma thread que lida com o tratamento de uma conexao T\+CP de entrada. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_my_thread_ac1b04b0fa6b32038e810c7105ef762f6}\label{class_my_thread_ac1b04b0fa6b32038e810c7105ef762f6}} 
+\index{My\+Thread@{My\+Thread}!My\+Thread@{My\+Thread}}
+\index{My\+Thread@{My\+Thread}!My\+Thread@{My\+Thread}}
+\subsubsection{\texorpdfstring{My\+Thread()}{MyThread()}}
+{\footnotesize\ttfamily My\+Thread\+::\+My\+Thread (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{Q\+Object $\ast$}]{parent,  }\item[{\mbox{\hyperlink{class_data_storage}{Data\+Storage}} $\ast$}]{storage }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_my_thread}{My\+Thread}} eh o construtor da classe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & eh o identificador da thread \\
+\hline
+{\em parent} & \\
+\hline
+{\em storage} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_my_thread_a447710039787ae20134a9b572487840f}\label{class_my_thread_a447710039787ae20134a9b572487840f}} 
+\index{My\+Thread@{My\+Thread}!disconnected@{disconnected}}
+\index{disconnected@{disconnected}!My\+Thread@{My\+Thread}}
+\subsubsection{\texorpdfstring{disconnected}{disconnected}}
+{\footnotesize\ttfamily void My\+Thread\+::disconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_my_thread_aebf11d93838f22c9547d0c6aa97002be}\label{class_my_thread_aebf11d93838f22c9547d0c6aa97002be}} 
+\index{My\+Thread@{My\+Thread}!error@{error}}
+\index{error@{error}!My\+Thread@{My\+Thread}}
+\subsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily void My\+Thread\+::error (\begin{DoxyParamCaption}\item[{Q\+Tcp\+Socket\+::\+Socket\+Error}]{socketerror }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_my_thread_ae49528d4ec1b2208240f707f5aa74adf}\label{class_my_thread_ae49528d4ec1b2208240f707f5aa74adf}} 
+\index{My\+Thread@{My\+Thread}!message@{message}}
+\index{message@{message}!My\+Thread@{My\+Thread}}
+\subsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily void My\+Thread\+::message (\begin{DoxyParamCaption}\item[{Q\+String}]{\+\_\+t1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_my_thread_a277618fdd448b927f2e250c2076fc176}\label{class_my_thread_a277618fdd448b927f2e250c2076fc176}} 
+\index{My\+Thread@{My\+Thread}!ready\+Read@{ready\+Read}}
+\index{ready\+Read@{ready\+Read}!My\+Thread@{My\+Thread}}
+\subsubsection{\texorpdfstring{ready\+Read}{readyRead}}
+{\footnotesize\ttfamily void My\+Thread\+::ready\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_my_thread_a48f2e366e852087c53705f64e1ee65c2}\label{class_my_thread_a48f2e366e852087c53705f64e1ee65c2}} 
+\index{My\+Thread@{My\+Thread}!run@{run}}
+\index{run@{run}!My\+Thread@{My\+Thread}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void My\+Thread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mythread_8h}{mythread.\+h}}\item 
+\mbox{\hyperlink{moc__mythread_8cpp}{moc\+\_\+mythread.\+cpp}}\item 
+\mbox{\hyperlink{mythread_8cpp}{mythread.\+cpp}}\end{DoxyCompactItemize}

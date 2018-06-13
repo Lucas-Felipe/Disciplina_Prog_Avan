@@ -1,0 +1,88 @@
+\hypertarget{classplotter}{}\section{plotter Class Reference}
+\label{classplotter}\index{plotter@{plotter}}
+
+
+The plotter class Classe responsável por representar um gráfico através de um widget.  
+
+
+
+
+{\ttfamily \#include $<$plotter.\+h$>$}
+
+Inheritance diagram for plotter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classplotter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplotter_a6132b1d35e08cf0345c6ae6cc4ed5618}{plotter}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em plotter Construtor da classe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplotter_ac1fd83a3a57494cdacbe03fa28c98ce5}{paint\+Event}} (Q\+Paint\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em paint\+Event Método que determina o modo como será desenhado o gráfico \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplotter_af9cd37923cfa75a3b4352d7d0c38d67f}{plot\+Grafico}} (vector$<$ double $>$ \&t, vector$<$ double $>$ \&v)
+\begin{DoxyCompactList}\small\item\em plot\+Grafico Método que faz o desenho das linhas pelos valores recebidos \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The plotter class Classe responsável por representar um gráfico através de um widget. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplotter_a6132b1d35e08cf0345c6ae6cc4ed5618}\label{classplotter_a6132b1d35e08cf0345c6ae6cc4ed5618}} 
+\index{plotter@{plotter}!plotter@{plotter}}
+\index{plotter@{plotter}!plotter@{plotter}}
+\subsubsection{\texorpdfstring{plotter()}{plotter()}}
+{\footnotesize\ttfamily plotter\+::plotter (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+plotter Construtor da classe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Sinaliza o pai da classe \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classplotter_ac1fd83a3a57494cdacbe03fa28c98ce5}\label{classplotter_ac1fd83a3a57494cdacbe03fa28c98ce5}} 
+\index{plotter@{plotter}!paint\+Event@{paint\+Event}}
+\index{paint\+Event@{paint\+Event}!plotter@{plotter}}
+\subsubsection{\texorpdfstring{paint\+Event()}{paintEvent()}}
+{\footnotesize\ttfamily void plotter\+::paint\+Event (\begin{DoxyParamCaption}\item[{Q\+Paint\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+paint\+Event Método que determina o modo como será desenhado o gráfico 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classplotter_af9cd37923cfa75a3b4352d7d0c38d67f}\label{classplotter_af9cd37923cfa75a3b4352d7d0c38d67f}} 
+\index{plotter@{plotter}!plot\+Grafico@{plot\+Grafico}}
+\index{plot\+Grafico@{plot\+Grafico}!plotter@{plotter}}
+\subsubsection{\texorpdfstring{plot\+Grafico()}{plotGrafico()}}
+{\footnotesize\ttfamily void plotter\+::plot\+Grafico (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{t,  }\item[{vector$<$ double $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+plot\+Grafico Método que faz o desenho das linhas pelos valores recebidos 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Vetor de bits que sinaliza o tempo \\
+\hline
+{\em v} & Vetor de inteiros com os valores passados pelo server \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plotter_8h}{plotter.\+h}}\item 
+\mbox{\hyperlink{plotter_8cpp}{plotter.\+cpp}}\end{DoxyCompactItemize}
