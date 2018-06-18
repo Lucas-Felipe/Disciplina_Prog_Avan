@@ -40,7 +40,7 @@ void MainWindow::tcpDisconnect()
 
 void MainWindow::start()
 {
-    timer= startTimer(ui->horizontalSlider_timing->value() * 1000);
+    timer= startTimer(ui->horizontalSlider_timing->value() * 10);
     qDebug ()<< "Timer Started";
 }
 
@@ -82,7 +82,7 @@ void MainWindow::getData(){
     {
         killTimer(timer);
     }
-    timer=startTimer(ui->horizontalSlider_timing->value()*1000);
+    timer=startTimer(ui->horizontalSlider_timing->value()*10);
 }
 
 void MainWindow::timerEvent(QTimerEvent *e)
