@@ -19,6 +19,8 @@ void plotter::paintEvent(QPaintEvent *event)
     QBrush brush;
     QPen pen;
     double x1,y1,x2,y2;
+    
+    painter.setRenderHint(QPainter::Antialiasing);
 
     //define a cor e tipo do preenchimento do fundo da tela
     brush.setColor(QColor(255,255,51));
