@@ -75,7 +75,7 @@ void MainWindow::Disconnect()
  */
 void MainWindow::start()
 {
-    timer = startTimer(ui->horizontalSlider_timing->value()*1000);
+    timer = startTimer(ui->horizontalSlider_timing->value()*10);
     qDebug ()<< "Timer Started";
 }
 
